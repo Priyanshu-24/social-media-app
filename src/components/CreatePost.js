@@ -103,7 +103,7 @@ function CreatePost() {
 
         </div>
       ) : (
-        <div>Please Login</div>
+        <div className="please-login-text">Please Login to create post</div>
       )}
     </div>
   );

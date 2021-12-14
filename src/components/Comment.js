@@ -40,7 +40,7 @@ function Comment({comments, id}) {
         value={comment}
         onChange={(event) => setComment(event.target.value)}
       ></textarea>
-      <button onClick={addComment}>Post</button>
+      <button onClick={addComment} className="post-btn">Post</button>
 
     </div>
   );

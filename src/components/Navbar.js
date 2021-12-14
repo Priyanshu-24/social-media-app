@@ -13,13 +13,22 @@ function Navbar() {
     if (user_res) setUser(user_res);
   };
 
+  const logOUT = () => {
+    window.location.reload(false);  
+  }
+
+
   return (
     <div className="header">
-      <div>Hello</div>
+      <div>Hello Insta</div>
+      
       {user ? (
+        <div className="header-right">
+        <button onClick={logOUT} className="logout-btn">LogOut</button>
         <img src={user.photoURL} alt="profile pic" className = "profile-pic"/>
+        </div>
       ) : (
-        <button onClick={signInClick}>Sign-Up with Google</button>
+        <button onClick={signInClick} className="sign-up-google-btn">Sign-Up with Google</button>
       )}
     </div>
   );
